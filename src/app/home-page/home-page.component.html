@@ -1,0 +1,8 @@
+<h1>Hi {{currentUser.firstName}}!</h1>
+<input type="text" #newMes>
+<button class="btn btn-warning ml-3 px-3" (click)='add(newMes.value); newMes.value=""'>add</button>
+<ul *ngFor="let mes of message" class="list-unstyled">
+    <li> {{ mes | json }}
+        <button class="btn btn-danger" (click)='delete(mes.id)'>del</button>
+    </li>
+</ul>
